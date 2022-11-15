@@ -8,11 +8,12 @@ years_list = [1934, 1878, 1986, 1965, 1914, ['Гагарина', 'Сталина
 
 good_answer = 0  # правильные ответы
 bad_answer = 0  # ложные ответы
-questions = 5  # кол-во вопросов
+questions = 0  # кол-во вопросов
 
 while True:
     for i in range(len(years_list) - 1):  # -1 чтобы цикл не проваливался во вложенный список
         tmp = int(input(f'Введи дату рождения {years_list[5][i]}: '))  # из вложенного списика смотрит кого угадать
+        questions+=1
         if tmp == years_list[i]:
             good_answer += 1
         else:
@@ -26,5 +27,4 @@ while True:
     if ask == 'нет':
         break
     else:
-        questions += 5  # в случае, если игра продолжается добавляем для корректности расчетов % по выходу
         continue
