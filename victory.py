@@ -13,7 +13,7 @@ questions = 0  # кол-во вопросов
 while True:
     for i in range(len(years_list) - 1):  # -1 чтобы цикл не проваливался во вложенный список
         tmp = int(input(f'Введи дату рождения {years_list[5][i]}: '))  # из вложенного списика смотрит кого угадать
-        questions+=1
+        questions += 1
         if tmp == years_list[i]:
             good_answer += 1
         else:
